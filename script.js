@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
         setTimeout(() => {
             let message = "Your smile is really beautiful. Honestly, you look like a goddess when you smile 🌺💐";
             let i = 0;
-            let speed = 150;
+            let speed = 160;
             finalMessage.innerHTML = "";
 
             function typeWriter() {
@@ -43,8 +43,8 @@ document.addEventListener("DOMContentLoaded", function () {
                             
                             babyYoda.style.opacity = "1";
                             babyYoda.style.transform = "translateY(0)";
-                        }, 3000); // This delay ensures it happens AFTER the vanish effect
-                    }, 3000);
+                        }, 1500); // This delay ensures it happens AFTER the vanish effect
+                    }, 1500);
                 }
             }
 
