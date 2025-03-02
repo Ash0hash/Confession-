@@ -96,23 +96,6 @@ button:hover {
     transition: opacity 1s ease-in-out, transform 1s ease-in-out;
 }
 
-/* Baby Yoda Offer Animation */
-@keyframes offerFlowers {
-    0% { transform: translateY(0) rotate(0); }
-    50% { transform: translateY(-10px) rotate(-5deg); }
-    100% { transform: translateY(0) rotate(0); }
-}
-
-#babyYoda {
-    width: 200px;
-    height: auto;
-    transition: transform 0.5s ease-in-out;
-}
-
-#babyYoda:hover {
-    animation: offerFlowers 1s infinite alternate;
-}
-
 /* Fade In Effects */
 @keyframes fadeInScale {
     0% { opacity: 0; transform: scale(0.8); }
