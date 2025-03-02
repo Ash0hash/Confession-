@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let heyBtn = document.getElementById("heyBtn");
     let revealBtn = document.getElementById("revealBtn");
     let finalMessage = document.getElementById("finalMessage");
+    let keepSmiling = document.getElementById("keepSmiling");
 
     function goToPage(url) {
         window.location.href = url;
@@ -31,8 +32,15 @@ document.addEventListener("DOMContentLoaded", function () {
                     setTimeout(typeWriter, speed);
                 } else {
                     setTimeout(() => {
-                        finalMessage.classList.add("vanish-effect");  // ✅ Adds vanish effect after typing
-                    }, 2000);
+                        finalMessage.classList.add("vanish-effect"); // ✅ Start vanishing
+                        
+                        setTimeout(() => {
+                            if (keepSmiling) {
+                                keepSmiling.style.opacity = "1"; // ✅ Now show "Keep Smiling!"
+                                keepSmiling.style.transform = "scale(1)";
+                            }
+                        }, 3000); // Wait for vanish effect to complete (3s)
+                    }, 2000); // Wait before vanish starts
                 }
             }
 
