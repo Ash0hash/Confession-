@@ -32,18 +32,19 @@ document.addEventListener("DOMContentLoaded", function () {
                     i++;
                     setTimeout(typeWriter, speed);
                 } else {
+                    // ✅ Wait 3 seconds before starting the vanish effect
                     setTimeout(() => {
                         finalMessage.classList.add("vanish-effect");
 
+                        // ✅ Only after the vanish effect completes, show Keep Smiling & Baby Yoda
                         setTimeout(() => {
-                            if (keepSmiling && babyYoda) {
-                                keepSmiling.style.opacity = "1";
-                                keepSmiling.style.transform = "scale(1)";
-                                babyYoda.style.opacity = "1";
-                                babyYoda.style.transform = "translateY(0)";
-                            }
-                        }, 3000);
-                    }, 2000);
+                            keepSmiling.style.opacity = "1";
+                            keepSmiling.style.transform = "scale(1)";
+                            
+                            babyYoda.style.opacity = "1";
+                            babyYoda.style.transform = "translateY(0)";
+                        }, 3000); // This delay ensures it happens AFTER the vanish effect
+                    }, 3000);
                 }
             }
 
