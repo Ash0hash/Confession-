@@ -83,7 +83,7 @@ button:hover {
     color: hotpink;
     opacity: 0;
     transform: scale(0.8);
-    animation: fadeInScale 2s ease-in-out forwards;
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
 }
 
 /* Baby Yoda Animation */
@@ -93,13 +93,7 @@ button:hover {
     margin-top: 20px;
     opacity: 0;
     transform: translateY(20px);
-    animation: fadeInMove 2s ease-in-out forwards;
-}
-
-#babyYoda {
-    width: 200px;
-    height: auto;
-    transition: transform 0.5s ease-in-out;
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
 }
 
 /* Baby Yoda Offer Animation */
@@ -107,6 +101,12 @@ button:hover {
     0% { transform: translateY(0) rotate(0); }
     50% { transform: translateY(-10px) rotate(-5deg); }
     100% { transform: translateY(0) rotate(0); }
+}
+
+#babyYoda {
+    width: 200px;
+    height: auto;
+    transition: transform 0.5s ease-in-out;
 }
 
 #babyYoda:hover {
@@ -144,4 +144,4 @@ button:hover {
     #message, #finalMessage {
         font-size: 22px;
     }
-          }
+}
